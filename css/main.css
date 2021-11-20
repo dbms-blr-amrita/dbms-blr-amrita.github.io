@@ -1,0 +1,112 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: Helvetica;
+}
+
+.navbar{
+    display : flex;
+    position : fixed ;
+    top : 0;
+    width : 100%;
+    background-color : black;
+    z-index : 1;
+}
+
+.logo img{
+    width : 100px;
+}
+
+.logo {
+    width : 10%;
+}
+
+.content {
+    width : 90%;
+    padding : 20px;
+}
+
+.content a{
+    margin : 2px;
+    padding : 5px 10px;
+    text-decoration:  none;
+    color : white;
+    padding : 20px;
+}
+
+.content a:hover{
+    color : black;
+    background-color : white;
+}
+
+.background1 img{
+    opacity : 0.9;
+    width : 100%;
+    z-index : -1;
+}
+
+.bgcontent{
+    padding : 30px;
+    left : 800px;
+    top : 300px;
+    position : absolute;
+    background : rgba(255, 255, 255, 0.473);
+    border-radius : 20px;
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.bgcontent p{
+    font-size:  20px;
+    color : rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.row1{
+    display: flex;
+}
+
+.services h1{
+    margin : 30px;
+}
+.polaroid {
+    width : 30%;
+    margin : 20px;
+    box-shadow:2px 2px 2px 2px #5c5656;
+    padding : 2%;
+}
+
+.polaroid img{
+    width : 100%;
+}
+
+.polaroid p{
+    padding : 20px;
+    text-align: justify;
+}
+
+.polaroid a{
+    margin-left : 130px;
+    text-decoration: none;
+    padding : 10px;
+    background-color: rgb(77, 70, 70);
+    color : white;
+    border-radius : 10px;
+}
+
+.team h1{
+    margin-top : 40px;
+    margin-left : 40px;
+}
+
+.team_row{
+    display : flex;
+}
+
+.team_details{
+    margin : 5px;
+    width : 20%;
+}
+
+.team_details img{
+    width : 100%;
+}
