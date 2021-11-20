@@ -13,10 +13,6 @@
     z-index : 1;
 }
 
-.logo img{
-    width : 100px;
-}
-
 .logo {
     width : 10%;
 }
@@ -67,6 +63,7 @@
 
 .services h1{
     margin : 30px;
+    margin-top: 60px;
 }
 .polaroid {
     width : 30%;
@@ -103,10 +100,34 @@
 }
 
 .team_details{
-    margin : 5px;
-    width : 20%;
+    padding-bottom: 30px;
+    margin : 1.25%;
+    width : 22.5%;
+    background-color: #a5a1a1;
 }
 
 .team_details img{
+    width : 80%;
+    margin : 10%;
+}
+
+.team_details p{
+    color : white;
+    margin-left : 40px;
+    text-align: justify;
+}
+
+.advert{
     width : 100%;
+}
+
+.advert img{
+    width : 100%;
+    z-index : -2;
+}
+
+.advert p{
+    padding-top : 50px;
+    font-size: 40px;
+    margin-left: 30px;
 }
