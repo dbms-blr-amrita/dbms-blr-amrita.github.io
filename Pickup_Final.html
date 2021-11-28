@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script type="text/javascript">
+    function redirect()
+    {
+    	var x = document.info.Area.value;
+    	var y = document.info.Town.value;
+    	var z = document.info.St.value;
+    	var w = document.info.Zip.value;
+    	if(x.length == 0)
+    	{
+    		alert('Please enter the Area field');
+    	}
+    	else if(y.length == 0)
+    	{
+    		alert('Please enter the Town field');
+    	}
+    	else if(z.length == 0)
+    	{
+    		alert('Please enter the States field');
+    	}
+    	else if(w.length == 0)
+    	{
+    		alert('Please enter the Zipcode field');
+    	}
+    	else if(w.length > 7)
+    	{
+    		alert('Please enter a valid Zipcode');
+    	}
+    	else
+    	{
+    		if(document.getElementById("checker").checked == true)
+        	{
+            	window.location.href = ""; //Later page
+        	}
+        	else
+        	{
+            	window.location.href = ""; //Now page
+        	}
+    	}
+    }
+</script>
+<style type="text/css">
+	*
+	{
+		border-radius: 5px;
+	}
+	body
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('background_pickup.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center;
+	}
+	.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 17px;
+  border-radius: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 1.7px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 17px;
+}
+  .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  border: 0;
+  border-bottom: 2px solid black;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  width: 150%;
+  position: relative;
+  left: 2px;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: black;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+    .form__field:required, .form__field:invalid
+    {
+        box-shadow: none;
+    }
+    .btn 
+    {
+        box-sizing: border-box;
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid rgba(225, 225, 225, 0.99);
+        border-radius: 0.6em;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        font-size: 13px;
+        line-height: 1;
+        margin: 0px;
+        position: relative;
+        bottom: 50px;
+        left: 33.5%;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-weight: bold;
+        box-shadow: 0 0 40px 40px rgba(89,125,244,0.6) inset;
+    }
+    .btn:active
+    {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px 40px rgba(255,255,255) inset;
+    }
+    .one
+    {
+      position: relative;
+      transition: 0.1s;
+      padding: 1.2em 2.8em;
+    }
+    .out_form
+    {
+    	text-align: center;
+    	position: absolute;
+    	background-color: rgba(255, 255, 255, 0.74);
+    	padding: 10px;
+    	top: 17%;
+    	left: 37%;
+        height: 65%;
+        width: 25%;
+        animation-duration: 0.6s;
+        animation-timing-function: ease;
+        animation-name: expand;
+        animation-direction: forwards;
+    }
+    @keyframes expand
+    {
+        0%
+        {
+            transform: translateX(1400px);
+        }
+        100%
+        {
+            transform: translateX(5px);
+        }
+    }
+    body
+    {
+        overflow-x: hidden;
+    }
+    form
+    {
+        height: 100px;
+    }
+    /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+<body>
+	<div class="out_form">
+	<div style="background-color: rgba(255, 255, 255, 0); border-radius: 0;border-top-right-radius: 5px;border-top-left-radius: 5px; ">
+        <h1>Welcome to our Website</h1><br>
+        <div style="position: relative; bottom: 10px;">
+        <b>Now</b>&nbsp&nbsp&nbsp
+        <label class="switch">
+            <input type="checkbox" id="checker">
+            <span class="slider round"></span>
+        </label>
+        &nbsp&nbsp&nbsp<b>Later</b><br>    
+        </div>
+  </div>
+        <form name="info" method="post/get" class="form_des">
+          <div style="position: relative; left: 10.5%; top: 0%;">
+        	<div class="form__group field">
+            <input type="text" class="form__field" placeholder="Area/Street" name = "Area" style="color: black;" required/>
+            <label for="name" class="form__label">Area/Street</label>
+          </div><br>
+          </div>
+           <div style="position: relative; left: 10.5%; top: -20%;">
+        	<div class="form__group field">
+            <input type="text" class="form__field" placeholder="Town/City" name = "Town" style="color: black;" required/>
+            <label for="name" class="form__label">Town/City</label>
+          </div><br>
+          </div>
+           <div style="position: relative; left: 10.5%; top: -40%;">
+        	<div class="form__group field">
+            <input type="text" class="form__field" placeholder="State" name = "St" list="states" style="color: black;" required/>
+            <label for="name" class="form__label">State</label>
+          </div>
+          <datalist id="states">
+			<option value="Andhra Pradesh">Andhra Pradesh</option>
+			<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+			<option value="Assam">Assam</option>
+			<option value="Bihar">Bihar</option>
+			<option value="Chandigarh">Chandigarh</option>
+			<option value="Chhattisgarh">Chhattisgarh</option>
+			<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+			<option value="Daman and Diu">Daman and Diu</option>
+			<option value="Delhi">Delhi</option>
+			<option value="Lakshadweep">Lakshadweep</option>
+			<option value="Puducherry">Puducherry</option>
+			<option value="Goa">Goa</option>
+			<option value="Gujarat">Gujarat</option>
+			<option value="Haryana">Haryana</option>
+			<option value="Himachal Pradesh">Himachal Pradesh</option>
+			<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+			<option value="Jharkhand">Jharkhand</option>
+			<option value="Karnataka">Karnataka</option>
+			<option value="Kerala">Kerala</option>
+			<option value="Madhya Pradesh">Madhya Pradesh</option>
+			<option value="Maharashtra">Maharashtra</option>
+			<option value="Manipur">Manipur</option>
+			<option value="Meghalaya">Meghalaya</option>
+			<option value="Mizoram">Mizoram</option>
+			<option value="Nagaland">Nagaland</option>
+			<option value="Odisha">Odisha</option>
+			<option value="Punjab">Punjab</option>
+			<option value="Rajasthan">Rajasthan</option>
+			<option value="Sikkim">Sikkim</option>
+			<option value="Tamil Nadu">Tamil Nadu</option>
+			<option value="Telangana">Telangana</option>
+			<option value="Tripura">Tripura</option>
+			<option value="Uttar Pradesh">Uttar Pradesh</option>
+			<option value="Uttarakhand">Uttarakhand</option>
+			<option value="West Bengal">West Bengal</option>
+		</datalist>
+          <br>
+          </div>
+           <div style="position: relative; left: 10.5%; top: -60%;">
+        	<div class="form__group field">
+            <input type="number" class="form__field" placeholder="Zipcode" name = "Zip" style="color: black;" required/>
+            <label for="name" class="form__label">Zipcode</label>
+          </div><br>
+          </div>
+         <button class="btn one" type="button" onclick="redirect()">Next</button>
+        </form>
+	</div>
+</body>
+</html>
