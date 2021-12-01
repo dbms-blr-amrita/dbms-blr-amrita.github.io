@@ -62,8 +62,10 @@
 }
 
 .services h1{
+    font-size: 30px;
     margin : 30px;
-    margin-top: 60px;
+    margin-top: 0px;
+    padding-top: 80px;
 }
 .polaroid {
     width : 30%;
@@ -91,8 +93,9 @@
 }
 
 .team h1{
-    margin-top : 40px;
+    padding-top: 80px;
     margin-left : 40px;
+    font-size: 30px;
 }
 
 .team_row{
@@ -130,4 +133,40 @@
     padding-top : 50px;
     font-size: 40px;
     margin-left: 30px;
+}
+
+footer{
+    display: flex;
+    box-shadow: 2px 2px 2px 2px black;
+    background-color: #a5a1a1;
+}
+
+.footer_details{
+    box-shadow: inset;
+    width : 50%;
+}
+.footer_links a{
+    color : black;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+.footer_links{
+    padding: 50px;
+    border-left :1px solid rgb(0, 0, 0);
+    width : 50%;
+}
+
+.footer_links a:hover{
+    color : white;
+}
+
+.footer_details p,h1,a{
+    margin-left : 50px;
+    font-size: 20px;
+}
+
+.footer_details a{
+    text-decoration: none;
+    color : black;
 }
