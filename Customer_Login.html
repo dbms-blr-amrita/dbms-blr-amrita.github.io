@@ -8,14 +8,7 @@
 <script type="text/javascript">
     function redirect()
     {
-    	var email = document.info.email.value;
-    	var str = document.info.pword.value;
-    	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    	if(email.match(mailformat) == false)
-    	{
-    		alert("Please enter a valid Email ID");
-    		return false;
-    	}
+    	var str = document.customer_signin_info.customer_signin_pword.value;
     	if(str.length < 8)
     	{
     		alert("Length of the Password should be greater than 8");
@@ -31,6 +24,16 @@
     		return false;
     	}
     }
+	function ValidateEmail(x)  
+	{  
+		var atposition = x.indexOf("@");  
+		var dotposition = x.lastIndexOf(".");  
+		if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+		{  
+  			alert('Please Enter a Valid Email ID');  
+  			return false;
+  		}  
+	}
 </script>
 <style type="text/css">
 	*
@@ -39,7 +42,7 @@
 	}
 	body
 	{
-		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('');//Some Image
+		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('background_pickup.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
@@ -180,20 +183,20 @@
 	<div style="background-color: rgba(255, 255, 255, 0); border-radius: 0;border-top-right-radius: 5px;border-top-left-radius: 5px; ">
         <h1>Customer Login</h1><br>
   </div>
-        <form name="info" method="post/get" class="form_des">
+        <form name="customer_signin_info" method="post/get" class="form_des">
           <div style="position: relative; left: 10%; top: -25%;">
         	<div class="form__group field">
-            <input type="email" class="form__field" name="email" placeholder="Email ID" list="city" style="color: black;" id="customer" required/>
+            <input type="email" class="form__field" name="customer_signin_email" placeholder="Email ID" list="city" style="color: black;" id="customer" required/>
             <label for="name" class="form__label">Email ID</label>
           </div>
           <br>
           <div style="position: relative; left: 0.3%; top: -25%;">
         	<div class="form__group field">
-            <input type="Password" class="form__field" name="pword" placeholder="Pick Up Location" list="city" style="color: black;" id="customer" required/>
+            <input type="Password" class="form__field" name="customer_signin_pword" placeholder="Pick Up Location" list="city" style="color: black;" id="customer" required/>
             <label for="name" class="form__label">Password</label>
           </div>
           </div>
-         <button class="btn one" type="button" onclick="redirect()">Next</button>
+         <button class="btn one" type="button" onclick="redirect(); ValidateEmail(document.customer_signin_info.customer_signin_email.value);">Next</button>
         </form>
 	</div>
 </body>
