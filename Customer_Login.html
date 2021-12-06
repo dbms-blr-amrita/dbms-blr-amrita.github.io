@@ -42,19 +42,18 @@
 	}
 	body
 	{
-		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('');
+		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('background_pickup.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
 		background-position: center;
 	}
-  .form__group
-	{
- 		position: relative;
-  		padding: 15px 0 0;
-  		margin-top: 10px;
-  		width: 50%;
-	}
+  .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
 
 .form__field {
   border: 0;
@@ -178,6 +177,7 @@
     {
         height: 100px;
     }
+    a {text-decoration: none;}
 </style>
 <body>
 	<div class="out_form">
@@ -200,5 +200,11 @@
          <button class="btn one" type="button" onclick="redirect(); ValidateEmail(document.customer_signin_info.customer_signin_email.value);">Next</button>
         </form>
 	</div>
+	      <div style="position: relative; top: 12.5%;">
+	      	Don't have an account ?
+          	<a href="Customer_Sign_up_page.html" style="font-size: 18px; color: blue;">
+          		Sign up
+          	</a>
+          </div>
 </body>
 </html>
