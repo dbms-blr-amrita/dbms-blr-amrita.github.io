@@ -57,7 +57,7 @@
 	}
 	body
 	{
-		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('');
+		background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('background_pickup.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
@@ -138,7 +138,7 @@
         line-height: 1;
         margin: 20px;
         position: relative;
-        top: 20px;
+        top: 55px;
         left: 15%;
         text-decoration: none;
         text-align: center;
@@ -166,7 +166,7 @@
     	padding: 10px;
     	top: 15%;
     	left: 37%;
-        height: 68.5%;
+        height: 73.5%;
         width: 25%;
         animation-duration: 0.6s;
         animation-timing-function: ease;
@@ -205,6 +205,7 @@
 	{
   		-moz-appearance: textfield;
 	}
+	a{ text-decoration: none; }
 </style>
 <body>
 	<div class="out_form">
@@ -245,5 +246,11 @@
          <button class="btn one" type="button" onclick="validateemail(document.customerSUinfo.customer_signup_email.value); redirect(); numVal();" >Next</button>
         </form>
 	</div>
+		  <div style="position: relative; top: 38%;">
+	      	Already a Member ?
+          	<a href="Customer_Login.html" style="font-size: 18px; color: blue;">
+          		Sign in
+          	</a>
+          </div>
 </body>
 </html>
