@@ -18,8 +18,26 @@
 }
 
 .content {
-    width : 90%;
+    width : 70%;
     padding : 20px;
+}
+
+.login{
+    padding : 20px;
+    width : 20%;
+}
+
+.login a{
+    color : white;
+    text-decoration: none;
+    padding : 10px;
+    background-color: #5c5656;
+    border-radius : 5px;
+}
+
+.login a:hover{
+    color : black;
+    background-color: rgb(250, 250, 250);
 }
 
 .content a{
