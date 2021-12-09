@@ -8,7 +8,7 @@
 <script type="text/javascript">
     function redirect()
     {
-    	var str = document.customer_signin_info.customer_signin_pword.value;
+    	var str = document.customerSUinfo.customer_signup_pword.value;
     	if(str.length < 8)
     	{
     		alert("Length of the Password should be greater than 8");
@@ -23,15 +23,30 @@
     		alert("Please Enter a Valid Password");
     		return false;
     	}
+    	var str2 = document.customerSUinfo.customer_signup_pword2.value;
+    	if(str != str2)
+    	{
+    		alert('Please Check your Confirm Password');
+    		return false;
+    	}
     }
-	function ValidateEmail(x)  
+    function numVal()
+    {
+    	var num = document.customerSUinfo.customer_number.value;
+    	if(num.length() != 10)
+    	{
+    		alert('Please Check your Phone Number');
+    		return false;
+    	}
+    }
+	function validateemail(x)  
 	{  
 		var atposition = x.indexOf("@");  
 		var dotposition = x.lastIndexOf(".");  
 		if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
 		{  
-  			alert('Please Enter a Valid Email ID');  
-  			return false;
+  			alert('Enter a Valid Email ID');  
+  			return false;  
   		}  
 	}
 </script>
@@ -123,7 +138,7 @@
         line-height: 1;
         margin: 20px;
         position: relative;
-        top: 60px;
+        top: 55px;
         left: 15%;
         text-decoration: none;
         text-align: center;
@@ -149,9 +164,9 @@
     	position: absolute;
     	background-color: rgba(255, 255, 255, 0.74);
     	padding: 10px;
-    	top: 24%;
+    	top: 15%;
     	left: 37%;
-        height: 51%;
+        height: 73.5%;
         width: 25%;
         animation-duration: 0.6s;
         animation-timing-function: ease;
@@ -177,33 +192,64 @@
     {
         height: 100px;
     }
-    a {text-decoration: none;}
+    /* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+	{
+  		-webkit-appearance: none;
+  		margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number]
+	{
+  		-moz-appearance: textfield;
+	}
+	a{ text-decoration: none; }
 </style>
 <body>
 	<div class="out_form">
 	<div style="background-color: rgba(255, 255, 255, 0); border-radius: 0;border-top-right-radius: 5px;border-top-left-radius: 5px; ">
-        <h1>Customer Login</h1><br>
+        <h1>Customer Signup</h1><br>
   </div>
-        <form name="customer_signin_info" method="post/get" class="form_des">
-          <div style="position: relative; left: 10%; top: -25%;">
+        <form name="customerSUinfo" method="post/get" class="form_des">
+        	<div style="position: relative; left: 10%; bottom: 35%;">
+          	<div class="form__group field">
+          		<input type="text" name="customer_name" class="form__field" placeholder="Name" style="color: black;" id="customer_name" required/>
+          		<label for="name" class="form__label">Name</label>
+          	</div>
+          	</div>
+          <div style="position: relative; left: 10%; top: -36%;">
         	<div class="form__group field">
-            <input type="email" class="form__field" name="customer_signin_email" placeholder="Email ID" list="city" style="color: black;" id="customer" required/>
+            <input type="email" class="form__field" name="customer_signup_email" placeholder="Email ID" list="city" style="color: black;" id="customer_email" required/>
             <label for="name" class="form__label">Email ID</label>
           </div>
-          <br>
-          <div style="position: relative; left: 0.3%; top: -25%;">
+          
+          <div style="position: relative; left: 0.3%;">
         	<div class="form__group field">
-            <input type="Password" class="form__field" name="customer_signin_pword" placeholder="Pick Up Location" list="city" style="color: black;" id="customer" required/>
+            <input type="Password" class="form__field" name="customer_signup_pword" placeholder="Password" list="city" style="color: black;" id="customer" required/>
             <label for="name" class="form__label">Password</label>
+          	</div>
           </div>
-          </div>
-         <button class="btn one" type="button" onclick="redirect(); ValidateEmail(document.customer_signin_info.customer_signin_email.value);">Next</button>
+            <div>
+          	<div class="form__group field">
+          		<input type="Password" name="customer_signup_pword2" class="form__field" placeholder="Re-Password" style="color: black;" id="customer_pword2" required/>
+          		<label for="name" class="form__label">Confirm Password</label>
+          	</div>
+          	</div>
+          	<div>
+          	<div class="form__group field">
+          		<input type="number" name="customer_number" class="form__field" placeholder="Name" style="color: black;" id="customer_number" required/>
+          		<label for="name" class="form__label">Phone Number</label>
+          	</div>
+          	</div>
+         <button class="btn one" type="button" onclick="validateemail(document.customerSUinfo.customer_signup_email.value); redirect(); numVal();" >Next</button>
         </form>
 	</div>
-	      <div style="position: relative; top: 12.5%;">
-	      	Don't have an account ?
-          	<a href="Customer_Sign_up_page.html" style="font-size: 18px; color: blue;">
-          		Sign up
+		  <div style="position: relative; top: 38%;">
+	      	Already a Member ?
+          	<a href="Customer_Login.html" style="font-size: 18px; color: blue;">
+          		Sign in
           	</a>
           </div>
 </body>
