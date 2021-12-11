@@ -95,3 +95,13 @@
     color: black ;
     background-color: aliceblue;
 }
+
+.bike_details h2{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.bike_details p{
+    margin-left: 20px;
+     
+}
