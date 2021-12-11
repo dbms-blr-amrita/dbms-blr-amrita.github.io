@@ -179,7 +179,15 @@ footer{
     color : white;
 }
 
-.footer_details p,h1,a{
+.footer_details p{
+    margin-left : 50px;
+    font-size: 20px;
+}
+.footer_details h1{
+    margin-left : 50px;
+    font-size: 20px;
+}
+.footer_details a{
     margin-left : 50px;
     font-size: 20px;
 }
