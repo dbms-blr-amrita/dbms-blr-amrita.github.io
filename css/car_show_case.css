@@ -1,0 +1,58 @@
+.car_portfolio{
+    position : relative;
+    top : 300px;
+    margin-top: 30px;
+    margin-left: 153px;
+    margin-right: 153px;
+}
+
+.car_polaroid{
+    display: flex;
+    width : 1229px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.car_image{
+    padding : 10px;
+    width : 30%;
+}
+
+.car_image img{
+    width : 100%;
+}
+
+.car_details{
+    width : 50%;
+}
+
+.car_book_now{
+    width : 20%;
+}
+
+.car_book_now h3{
+    margin-top : 60px;
+}
+
+.car_book_now a{
+    color : rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    padding : 15px;
+    border-radius: 20px;
+    background-color: rgb(235, 60, 54);
+}
+.car_book_now a:hover{
+    color: black ;
+    background-color: aliceblue;
+}
+
+.car_details h2{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.car_details p{
+    margin-left: 20px;
+     
+}
